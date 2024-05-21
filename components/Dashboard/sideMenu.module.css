@@ -1,0 +1,54 @@
+.menu_item {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px;
+  border-left: 5px solid transparent;
+  color: black;
+  cursor: pointer;
+}
+.menu_item_select {
+  display: flex;
+  justify-content: space-between;
+  padding: 6px;
+  background: rgba(209, 233, 243, 1);
+  color: rgba(35, 151, 200, 1);
+  border-left: 5px solid rgba(35, 151, 200, 1);
+  cursor: pointer;
+}
+.icon_text {
+  display: flex;
+  align-items: center;
+}
+
+/* dashcard */
+.card_container {
+  padding: 20px;
+  width: 350px;
+  height: 161px;
+
+  border-radius: 8px;
+  margin-top: 20px;
+}
+.digit {
+  font-family: Inter;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 14px;
+  text-align: right;
+}
+.card_title {
+  font-family: Inter;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 14px;
+  text-align: left;
+  margin-top: 50px;
+}
+.card_subTitle {
+  font-family: Inter;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 14px;
+  text-align: left;
+  margin-top: 15px;
+}

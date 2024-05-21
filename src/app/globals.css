@@ -3,31 +3,79 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+  font-family: Inter;
+  margin: auto;
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background: white;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+.sub_title {
+  font-family: Inter;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 14px;
+  color: rgba(158, 158, 158, 1);
+}
+.title {
+  font-family: Inter;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 14px;
+  color: rgba(35, 151, 200, 1);
+}
+.profile_title {
+  font-family: Inter;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 33px;
+}
+.profile_info_container {
+  width: fit-content;
+  margin: 0 auto;
+}
+
+/* login */
+.login_container {
+  width: 414px;
+  height: fit-content;
+  background: rgba(244, 250, 252, 1);
+
+  padding: 30px;
+
+  box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.1);
+  margin: auto;
+  border-top: 3px solid rgba(35, 151, 200, 1);
+}
+.profile_pic_container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+/* Accounting */
+
+.accounting_container {
+  padding: 30px;
+  width: fit-content;
+  background: rgba(244, 244, 244, 1);
+  margin: 0 auto;
+}
+.input_style {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  width: 248px;
+  height: 45px;
+  color: rgba(128, 128, 128, 0.633);
+  border-radius: 4px;
+  border: 1px solid rgba(235, 235, 235, 1);
+  background: white;
 }

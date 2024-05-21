@@ -1,0 +1,21 @@
+.login_container {
+  background: rgba(35, 151, 200, 1);
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 50px;
+}
+.login {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 86px;
+  height: 38px;
+  color: white;
+  padding: 12px 22px 12px 22px;
+  border-radius: 4px;
+  border: 1px solid white;
+  opacity: 0px;
+  background: transparent;
+}
