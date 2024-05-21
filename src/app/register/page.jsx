@@ -1,16 +1,19 @@
 "use client";
 import { Button, Checkbox, DatePicker, Form, Input, Select } from "antd";
 import axios from "axios";
+import { useRouter } from "next/navigation";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 function Register() {
+  const router = useRouter();
   const onFinish = async (values) => {
+    // console.log("value", values);
     const res = await axios.post(
       `https://pure-ledger.vercel.app/api/v1/user`,
       values
     );
-    // console.log("Success:", res);
+    console.log("Success", values, res);
     if (!res?.data?.success) {
       toast.error("Failed to register!", {
         position: "top-right",
@@ -22,6 +25,7 @@ function Register() {
         position: "top-right",
         autoClose: 5000,
       });
+      router.push("/");
     }
   };
   const onFinishFailed = (errorInfo) => {
@@ -122,11 +126,11 @@ function Register() {
 
           {/*  */}
           <Form.Item
-            name="employeeId"
+            name="employeeID"
             rules={[
               {
                 required: true,
-                message: "Please input your Full Name!",
+                message: "Please input your Employee Id!",
               },
             ]}
           >

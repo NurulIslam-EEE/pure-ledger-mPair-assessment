@@ -6,6 +6,7 @@ import { useRouter } from "next/navigation";
 import axios from "axios";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { signIn } from "next-auth/react";
 
 function Login() {
   const router = useRouter();
@@ -20,7 +21,22 @@ function Login() {
         position: "top-right",
         autoClose: 5000,
       });
+
+      return;
     }
+
+    router.push("/dashboard");
+
+    // try {
+    //   const result2 = await signIn("pure-ledge", {
+    //     employeeID: values.employeeID,
+    //     password: values.password,
+    //     redirect: false,
+    //   });
+    //   console.log("222222", result2);
+    // } catch (err) {
+    //   console.log("eer", err);
+    // }
 
     console.log("Success:", res);
   };
@@ -52,7 +68,7 @@ function Login() {
         >
           <Form.Item
             label="Employee ID"
-            name="employeeId"
+            name="employeeID"
             rules={[
               {
                 required: true,
